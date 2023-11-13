@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Choices</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+
+<form action="q7.html" method="get" autocomplete="on" id="quizForm">
+    <fieldset>
+        <label>6. Friends who know me best would say that I am:<br/></label><br/>
+        
+        <!-- Options -->
+        <label>a. Competitive.</label>
+        <input type="radio" name="opt_a" value="1"><label>1</label>
+        <input type="radio" name="opt_a" value="2"><label>2</label>
+        <input type="radio" name="opt_a" value="3"><label>3</label>
+        <input type="radio" name="opt_a" value="4"><label>4</label><br/>
+        
+        <label>b. Reserved, thoughtful.</label>
+        <input type="radio" name="opt_b" value="1"><label>1</label>
+        <input type="radio" name="opt_b" value="2"><label>2</label>
+        <input type="radio" name="opt_b" value="3"><label>3</label>
+        <input type="radio" name="opt_b" value="4"><label>4</label><br/>
+        
+        <label>c. Emotional, friendly.</label>
+        <input type="radio" name="opt_c" value="1"><label>1</label>
+        <input type="radio" name="opt_c" value="2"><label>2</label>
+        <input type="radio" name="opt_c" value="3"><label>3</label>
+        <input type="radio" name="opt_c" value="4"><label>4</label><br/>
+        
+        <label>d. Neat, prepared.</label>
+        <input type="radio" name="opt_d" value="1"><label>1</label>
+        <input type="radio" name="opt_d" value="2"><label>2</label>
+        <input type="radio" name="opt_d" value="3"><label>3</label>
+        <input type="radio" name="opt_d" value="4"><label>4</label><br/>
+    </fieldset>
+
+    <!-- Bottons back and foward -->
+    <button type="button" onclick="goBack()">Back</button>
+    <button type="button" onclick="goForward()">Foward</button>
+
+</form>
+
+<script>
+    // Disable other options with the same value
+    document.querySelectorAll('input[type="radio"]').forEach(function(input) {
+        input.addEventListener('change', function() {
+            var currentValue = input.value;
+            document.querySelectorAll('input[type="radio"]').forEach(function(otherInput) {
+                if (otherInput !== input && otherInput.value === currentValue) {
+                    otherInput.checked = false;
+                }
+            });
+        });
+    });
+
+    function goBack() {
+        window.history.back();
+    }
+
+    function goForward() {
+        document.getElementById('quizForm').submit();
+    }
+</script>
+
+</body>
+</html>
