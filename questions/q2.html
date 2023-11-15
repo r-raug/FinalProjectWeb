@@ -10,63 +10,43 @@
 </head>
 <body>
 
-<form action="q3.html" method="get" autocomplete="on" id="quizForm">
+<form action="q3.html" method="get" autocomplete="on" id="quizForm" onsubmit="return user_input()">
     <fieldset>
         <label>2. The best way for others to show me they care about me is to:<br/></label><br/>
         
         <!-- Options -->
         <label>a. Do fun things with me.</label>
-        <input type="radio" name="opt_a" value="1"><label>1</label>
-        <input type="radio" name="opt_a" value="2"><label>2</label>
-        <input type="radio" name="opt_a" value="3"><label>3</label>
-        <input type="radio" name="opt_a" value="4"><label>4</label><br/>
+        <input type="radio" name="opt_a" id= "opt_a" value="1"><label>1</label>
+        <input type="radio" name="opt_a" id= "opt_a" value="2"><label>2</label>
+        <input type="radio" name="opt_a" id= "opt_a" value="3"><label>3</label>
+        <input type="radio" name="opt_a" id= "opt_a" value="4"><label>4</label><br/>
         
         <label>b. Give me space to be myself.</label>
-        <input type="radio" name="opt_b" value="1"><label>1</label>
-        <input type="radio" name="opt_b" value="2"><label>2</label>
-        <input type="radio" name="opt_b" value="3"><label>3</label>
-        <input type="radio" name="opt_b" value="4"><label>4</label><br/>
+        <input type="radio" name="opt_b" id= "opt_b" value="1"><label>1</label>
+        <input type="radio" name="opt_b" id= "opt_b" value="2"><label>2</label>
+        <input type="radio" name="opt_b" id= "opt_b" value="3"><label>3</label>
+        <input type="radio" name="opt_b" id= "opt_b" value="4"><label>4</label><br/>
         
         <label>c. Spend time with me doing whatever.</label>
-        <input type="radio" name="opt_c" value="1"><label>1</label>
-        <input type="radio" name="opt_c" value="2"><label>2</label>
-        <input type="radio" name="opt_c" value="3"><label>3</label>
-        <input type="radio" name="opt_c" value="4"><label>4</label><br/>
+        <input type="radio" name="opt_c" id= "opt_c" value="1"><label>1</label>
+        <input type="radio" name="opt_c" id= "opt_c" value="2"><label>2</label>
+        <input type="radio" name="opt_c" id= "opt_c" value="3"><label>3</label>
+        <input type="radio" name="opt_c" id= "opt_c" value="4"><label>4</label><br/>
         
         <label>d. Do what I want to do; not let me down or go back on their word.</label>
-        <input type="radio" name="opt_d" value="1"><label>1</label>
-        <input type="radio" name="opt_d" value="2"><label>2</label>
-        <input type="radio" name="opt_d" value="3"><label>3</label>
-        <input type="radio" name="opt_d" value="4"><label>4</label><br/>
+        <input type="radio" name="opt_d" id= "opt_d" value="1"><label>1</label>
+        <input type="radio" name="opt_d" id= "opt_d" value="2"><label>2</label>
+        <input type="radio" name="opt_d" id= "opt_d" value="3"><label>3</label>
+        <input type="radio" name="opt_d" id= "opt_d" value="4"><label>4</label><br/>
     </fieldset>
 
-    <!-- Bottons back and foward -->
-    <button type="button" onclick="goBack()">Back</button>
-    <button type="button" onclick="goForward()">Foward</button>
+      <!-- Botões para avançar e voltar -->
 
-</form>
-
-<script>
-    // Disable other options with the same value
-    document.querySelectorAll('input[type="radio"]').forEach(function(input) {
-        input.addEventListener('change', function() {
-            var currentValue = input.value;
-            document.querySelectorAll('input[type="radio"]').forEach(function(otherInput) {
-                if (otherInput !== input && otherInput.value === currentValue) {
-                    otherInput.checked = false;
-                }
-            });
-        });
-    });
-
-    function goBack() {
-        window.history.back();
-    }
-
-    function goForward() {
-        document.getElementById('quizForm').submit();
-    }
-</script>
-
+      <button type="button" onclick="goBack()">Back</button>
+      <button type="button" onclick="goForward(2)">Forward</button>
+  
+  </form>
+  
+  <script src="../js/main.js"></script>
 </body>
 </html>
