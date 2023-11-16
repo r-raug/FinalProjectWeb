@@ -1,0 +1,45 @@
+
+body {
+    display: flex;
+    justify-content: center;                     
+    height: 100vh;
+    margin: 0;
+}
+/* Styles to align radio buttons*/
+fieldset {
+border: none;
+}
+
+label {
+display: block;
+margin-bottom: 10px;
+}
+
+.options {
+display: flex;
+width: 100vw;
+align-items: center;
+gap: 10px;
+}
+
+.options > div.question {
+width: 25%;
+display: flex;
+flex-direction: row;
+}
+
+.options > div.radio {
+width: 50%;
+display: flex;
+flex-direction: row;
+}
+
+input[type="radio"] {
+margin: 5px;
+transform: scale(1.2);       
+}
+
+.qpage{        
+    max-width: 600px;
+    padding: 20px;
+}
