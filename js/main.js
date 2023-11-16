@@ -43,11 +43,11 @@ function user_input(pageNumber) {
     }
 }
 
-// Função para avançar para a próxima página
+// Function to advance to the next page.
 function goForward(pageNumber) {
     if (user_input(pageNumber)) {
-        // Redireciona para a próxima página
+        // Redirects to the next page.
         var nextPage = pageNumber + 1;
-        window.location.href = 'q' + nextPage + '.html'; // Substitua 'pagina' pelo nome da sua próxima página
+        window.location.href = 'q' + nextPage + '.html'; 
     }
 }
