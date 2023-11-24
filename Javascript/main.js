@@ -1,10 +1,63 @@
-var quizAnswers = {};
+
+// Function to login.
+$(document).ready(function()
+{
+    // Home page
+    $('#homePageLoginLink').on('click', function(event)
+    {
+        event.preventDefault();
+        $('#loginForm').show();
+    });
+    $('#cancelLoginHomePage').on('click', function()
+    {
+        $('#loginForm').hide(); // Hide the login form
+        window.location.href = 'index.html'; // Redirect to the home page
+    });
+
+    // About us page
+    $('#aboutUsLoginLink').on('click', function(event)
+    {
+        event.preventDefault();
+        $('#aboutUsContent').hide();// Hide the about us content
+        $('#aboutUsLoginForm').show();// Show the login form
+    });
+    $('#cancelLogin').on('click', function()
+    {
+        $('#aboutUsLoginForm').hide(); // Hide the login form
+        $('#aboutUsContent').show(); // Show the about us content
+    });
+});
+
+
+$('#loginForm').on('submit', function(e)
+{
+        e.preventDefault();
+        var username = $('#username').val();
+        var password = $('#password').val();
+        if (username === 'user1' && password === 'passAdmin01#')
+        {
+            sessionStorage.setItem('authenticated', 'true');
+            window.location.href = 'questionnaire.html';
+        } else
+        {
+            $('#errorMessage').text('Invalid username or password!');
+        }
+    });
+    
+    $('#logout').on('click', function()
+    {
+        sessionStorage.removeItem('authenticated');
+        window.location.href = 'index.html';
+    });
+
+    var quizAnswers = {};
 
 function validateRadioSelection() {
     document.querySelectorAll('input[type="radio"]').forEach(function(input) {
         input.addEventListener('change', function() {
             var currentValue = input.value;
-            document.querySelectorAll('input[type="radio"]').forEach(function(otherInput) {
+            document.querySelectorAll('input[type="radio"]').forEach(function(otherInput)
+            {
                 if (otherInput !== input && otherInput.value === currentValue) {
                     otherInput.checked = false;
                 }

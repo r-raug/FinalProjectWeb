@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>True Colors Personality Test</title>
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Question 1</title>
+    <link rel="stylesheet" href="../CSS/Global.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Javascript/main.js"></script>
 </head>
 
 <body>
+
+  <header>
+    <div class="font-style">
+        <h1>True Colors Personality Test</h1>
+    </div>
+</header>
+<div class="container">
+    <nav>
+        <ul id="nav-bar">
+            <li>
+                <a class="box1" id="logout">Logout</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
   <div class="qpage">
     <!--create a form -->
     <form action="q2.html" method="get" autocomplete="on" id="quizForm" onsubmit="return user_input()">
@@ -16,7 +34,7 @@
         <div class="question">
           <!--Question number 1 -->
           <label>1 - When I make decisions:<br /></label>
-
+          <br>
           <p>Select from 1 to 4 in order of importance to you, where:</p>
 
           <!--Options for question number 1 -->
@@ -72,11 +90,13 @@
       </fieldset>
 
       <!--button to move to next question -->
-      <button type="button" onclick="goForward(1)">Forward</button>
+      <button class="forward" type="button" onclick="goForward(1)">Forward</button>
     </form>
   </div>
-  <!--path of javascript file -->
-  <script src="../js/main.js"></script>
 </body>
-
+<footer>
+  <p>Created by: Diego, Felipe, Jorge, and Rony.</p>
+  <p>Author: Team 3</p>
+  <p>&copy; 2023 True Colors Personality Test. All rights reserved.</p>
+</footer>
 </html>
