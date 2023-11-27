@@ -5,13 +5,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    
+}
+
 body
 {
     background-image: url(../images/back3.jpg);
     position: relative; 
-    min-height: 100vh; 
+    min-height: 100%; 
     padding-bottom: 60px;
-    
+    margin:0;
+    flex-direction: column;
 }
 
 header
@@ -33,7 +39,7 @@ h1
 {
     display: flex;
     justify-content: right;
-    min-height:30vh
+    min-height: calc(100vh - 60px);
 }
 #nav-bar
 {
@@ -81,8 +87,7 @@ nav li
     flex-direction: column;
 }
 
-#loginbutton
-{
+#loginbutton {
     border: 2px solid black;
     border-radius: 10px;
     padding: 5px;
@@ -137,18 +142,6 @@ nav li
     padding: 15px;
     color: #fff;
     background-color: #333;
-}
-
-footer
-{
-    background-color: #f2f2f2; 
-    color: black;
-    text-align: center;
-    padding: 5px 0;
-    position: absolute; 
-    bottom: 0;
-    width: 100%;
-    height: 70px;
 }
 
 label
@@ -239,22 +232,68 @@ input[type="radio"]
     font-size: 16px;
     text-align: justify;
 }
+
 .forward
 {
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
-.main-footer {
+.Answers_Color_body {
+    background-image: url(../images/back3.jpg);
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Answers_Color_header {
     background-color: beige;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-top: 0px;
-    border-top: px solid #ddd;
-=======
-.info{
-    font-size:medium;
-    color: red;
->>>>>>> 387f90898cdd9dab707d621e686ceaa38e419be2
+    padding: 1em;
 }
+
+.Answers_Color_section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Answers_Color_h2 {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.Answers_Color_h3{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 20;
+}
+
+section .Answers_Color_p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;}
+
+.main-footer {
+    background-color: #f2f2f2;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: auto;
+    width: 100%;
+    height: 80px;
+}
+
