@@ -11,6 +11,7 @@ body
     position: relative; 
     min-height: 100vh; 
     padding-bottom: 60px;
+    
 }
 
 header
@@ -227,6 +228,7 @@ input[type="radio"]
 .qpage
 {        
     background-color: beige;
+    opacity: 85%;
     margin: 20px auto; 
     padding: 10px;
     border: 1px solid black; 
@@ -242,6 +244,7 @@ input[type="radio"]
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .main-footer {
     background-color: beige;
     text-align: center;
@@ -249,4 +252,9 @@ input[type="radio"]
     margin-left: 10px;
     padding-top: 0px;
     border-top: px solid #ddd;
+=======
+.info{
+    font-size:medium;
+    color: red;
+>>>>>>> 387f90898cdd9dab707d621e686ceaa38e419be2
 }
