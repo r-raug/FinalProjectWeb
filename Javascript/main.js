@@ -71,17 +71,20 @@ window.onload = function() {
 };
 
 function user_input(pageNumber) {
+    
+
+    //using JQuery instead of document.querySelector
     var selectedOptions = [];
-    var opt_a = document.querySelector('input[name="opt_a"]:checked');
-    var opt_b = document.querySelector('input[name="opt_b"]:checked');
-    var opt_c = document.querySelector('input[name="opt_c"]:checked');
-    var opt_d = document.querySelector('input[name="opt_d"]:checked');
+    var opt_a = $('input[name="opt_a"]:checked').val();
+    var opt_b = $('input[name="opt_b"]:checked').val();
+    var opt_c = $('input[name="opt_c"]:checked').val();
+    var opt_d = $('input[name="opt_d"]:checked').val();
 
     if (opt_a && opt_b && opt_c && opt_d) {
-        selectedOptions.push(opt_a.value);
-        selectedOptions.push(opt_b.value);
-        selectedOptions.push(opt_c.value);
-        selectedOptions.push(opt_d.value);
+        selectedOptions.push(opt_a);
+        selectedOptions.push(opt_b);
+        selectedOptions.push(opt_c);
+        selectedOptions.push(opt_d);
 
         quizAnswers['q' + pageNumber] = selectedOptions;
 
