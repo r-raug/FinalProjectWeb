@@ -101,6 +101,11 @@ function goForward(pageNumber) {
     if (user_input(pageNumber)) {
         // Redirects to the next page.
         var nextPage = pageNumber + 1;
+        if(nextPage == 12){
+            window.location.href = 'results.html'
+        }
+        else{
         window.location.href = 'q' + nextPage + '.html'; 
+        }
     }
 }
