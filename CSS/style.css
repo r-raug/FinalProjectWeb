@@ -244,7 +244,17 @@ input[type="radio"]
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
+.main-footer {
+    background-color: beige;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 0px;
+    border-top: px solid #ddd;
+=======
 .info{
     font-size:medium;
     color: red;
+>>>>>>> 387f90898cdd9dab707d621e686ceaa38e419be2
 }
