@@ -248,33 +248,30 @@ input[type="radio"]
     border-radius: 10px;
 }
 
-.Answers_Color_body {
-    background-image: url(../images/back3.jpg);
-    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
-.Answers_Color_header {
-    background-color: gray;
+.Answers_Color_header
+{
+    background-color: beige;
     text-align: center;
-    padding: 1em;
+    padding: 10px;
+    width: 700px;
+    position: flex;
+    margin: 10px auto;
 }
 
-.Answers_Color_section {
+.Answers_Color_section
+{
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif, sans-serif;
     max-width: 800px;
     margin: 20px auto;
+    margin-bottom: 50px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.Answers_Color_h2 {
+.Answers_Color_h2
+{
     text-align: center;
     font-style: normal;
     font-weight: normal;
@@ -283,21 +280,24 @@ input[type="radio"]
     margin-top: 0;
 }
 
-.Answers_Color_h3{
+.Answers_Color_h3
+{
     font-weight: normal;
     font-size: 20px;
     margin-bottom: 0;
     margin-top: 20;
 }
 
-section .Answers_Color_p {
+section .Answers_Color_p
+{
     text-align: left;
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 0;
     margin-top: 0;}
 
-.main-footer {
+.main-footer
+{
     background-color: #f2f2f2; 
     color: black;
     text-align: center;
