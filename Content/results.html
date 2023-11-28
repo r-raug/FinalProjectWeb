@@ -8,25 +8,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../Javascript/main.js"></script>
 	
-	<style>
-	.result
-	{        
-    background-color: beige;
-    margin: 20px auto; 
-    padding: 10px;
-    border: 1px solid black; 
-    align-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    text-align: justify;
-	}
-	
-	.destaque {
-    background-color: yellow;
-	
-	</style>
 
 </head>
 
@@ -161,104 +142,6 @@
 </div>
    
    
-   
-   
-<script>
-
-var cache = window.sessionStorage;
-var quizAnswers = JSON.parse(cache.getItem("quizAnswers"));
-
-var somaA = 0;
-var somaB = 0;
-var somaC = 0;
-var somaD = 0;
-
-
-//fillUpTable();
-
-document.getElementById('totalA').textContent = somaA;
-document.getElementById('totalB').textContent = somaB;
-document.getElementById('totalC').textContent = somaC;
-document.getElementById('totalD').textContent = somaD;
-
-document.getElementById("somaAId").textContent = "a. Orange: " + somaA;
-document.getElementById("somaBId").textContent = "b. Green: " + somaB;
-document.getElementById("somaCId").textContent = "c. Blue: " + somaC;
-document.getElementById("somaDId").textContent = "d. Gold: " + somaD;
-
-
-// ... (seu código existente para calcular os resultados)
-
-// Obter as células da última linha
-var totalAElement = document.getElementById("totalA");
-var totalBElement = document.getElementById("totalB");
-var totalCElement = document.getElementById("totalC");
-var totalDElement = document.getElementById("totalD");
-
-// Criar um array para armazenar os valores das células
-var resultados = [
-    { label: "A", value: somaA },
-    { label: "B", value: somaB },
-    { label: "C", value: somaC },
-    { label: "D", value: somaD }
-];
-
-// Ordenar o array de resultados em ordem decrescente
-resultados.sort(function(a, b) {return b.value - a.value;});
-
-// Destacar as duas colunas com os maiores resultados
-for (var i = 0; i < resultados.length; i++) {
-    var label = resultados[i].label;
-    var value = resultados[i].value;
-
-    // Adicionar uma classe de destaque às duas colunas com os maiores resultados
-    if (i < 2) {
-        document.getElementById('var' + label + '1').classList.add('destaque');
-    }
-
-    // Atualizar os valores na última linha da tabela
-    document.getElementById('total' + label).textContent = value;
-}
-
-// Adicionar uma classe de destaque às células da última linha
-totalAElement.classList.add('destaque');
-totalBElement.classList.add('destaque');
-totalCElement.classList.add('destaque');
-totalDElement.classList.add('destaque');
-
-
-
-	fillUpTable()
-	{
-		for (var i = 1; i <= Object.keys(quizAnswers).length; i++) 
-		{
-			// Acessando as respostas da página i
-			var answersPage = quizAnswers['q' + i];
-
-			// Associando cada resposta a uma variável
-			var answerA = answersPage[0];
-			somaA = somaA + answerA;
-
-			var answerB = answersPage[1];
-			somaB = somaB + answerB;
-
-			var answerC = answersPage[2];
-			somaC = somaC + answerC;
-
-			var answerD = answersPage[3];
-			somaD = somaD + answerD;
-
-			// T
-	
-			document.getElementById('varA' + i).textContent = answerA;
-			document.getElementById('varB' + i).textContent = answerB;
-			document.getElementById('varC' + i).textContent = answerC;
-			document.getElementById('varD' + i).textContent = answerD;
-		}
-
-	}
-
-</script>
    
 </body>
 
