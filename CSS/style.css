@@ -5,19 +5,12 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    
-}
-
 body
 {
     background-image: url(../images/back3.jpg);
     position: relative; 
-    min-height: 100%; 
+    min-height: 100vh; 
     padding-bottom: 60px;
-    margin:0;
-    flex-direction: column;
 }
 
 header
@@ -39,7 +32,7 @@ h1
 {
     display: flex;
     justify-content: right;
-    min-height: calc(100vh - 17%);
+    min-height:30vh
 }
 #nav-bar
 {
@@ -87,7 +80,8 @@ nav li
     flex-direction: column;
 }
 
-#loginbutton {
+#loginbutton
+{
     border: 2px solid black;
     border-radius: 10px;
     padding: 5px;
@@ -107,54 +101,16 @@ nav li
     border-radius: 10px;
 }
 
-#loginForm {
-    background-color: #f2f2f2;
-    margin: 10px auto;
+#loginForm
+{
+    background-color: #f2f2f2; 
+    margin: 10px auto; 
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid black; 
     align-items: center;
-    width: 40%;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-}
-
-#loginForm h1,
-#loginForm input,
-#loginForm button {
-    display: block;
-    margin: 10px auto;
-    width: 60%;
-}
-
-#loginbutton,
-#cancelLoginHomePage {
-    width: 30%;
-    margin: 10px auto;
-}
-
-#loginForm input,
-#loginForm button {
-    padding: 8px;
-}
-
-#loginForm button {
-    border-radius: 10px;
-}
-
-#loginForm input,
-#loginbutton,
-#cancelLoginHomePage {
-    display: block;
-}  
-
-.form-container {
+    width: 700px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #aboutUsContent
@@ -180,6 +136,18 @@ nav li
     padding: 15px;
     color: #fff;
     background-color: #333;
+}
+
+footer
+{
+    background-color: #f2f2f2; 
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    height: 70px;
 }
 
 label
@@ -259,7 +227,6 @@ input[type="radio"]
 .qpage
 {        
     background-color: beige;
-    opacity: 85%;
     margin: 20px auto; 
     padding: 10px;
     border: 1px solid black; 
@@ -270,7 +237,6 @@ input[type="radio"]
     font-size: 16px;
     text-align: justify;
 }
-
 .forward
 {
     border-radius: 10px;
@@ -329,8 +295,8 @@ section .Answers_Color_p {
     background-color: #f2f2f2;
     color: black;
     text-align: center;
-    padding: 5px 0;
-    margin-top: auto;
+    padding: 15px 0;
+    margin-top: 80%;
     width: 100%;
     height: 80px;
 }
