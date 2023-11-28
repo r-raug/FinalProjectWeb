@@ -301,3 +301,25 @@ section .Answers_Color_p {
     height: 80px;
 }
 
+/*
+// CSS for result page, by Diego
+
+
+.result
+	{        
+    background-color: beige;
+    margin: 20px auto; 
+    padding: 10px;
+    border: 1px solid black; 
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    text-align: justify;
+	}
+	
+	.destaque {
+    background-color: yellow;
+    }
+*/
