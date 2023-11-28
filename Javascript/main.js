@@ -1,4 +1,4 @@
-
+/////////////////////////////////////////////// Login Script ///////////////////////////////////////////////
 // Function to login.
 $(document).ready(function()
 {
@@ -6,6 +6,7 @@ $(document).ready(function()
     $('#homePageLoginLink').on('click', function(event)
     {
         event.preventDefault();
+        console.log('Login link clicked');
         $('#loginForm').show();
     });
     $('#cancelLoginHomePage').on('click', function()
@@ -28,37 +29,52 @@ $(document).ready(function()
     });
 });
 
-
-$('#loginForm').on('submit', function(e)
+function handleSubmit(event)
 {
-        e.preventDefault();
-        var username = $('#username').val();
-        var password = $('#password').val();
-        if (username === 'user1' && password === 'passAdmin01#')
-        {
-            sessionStorage.setItem('authenticated', 'true');
-            window.location.href = 'questionnaire.html';
-        } else
-        {
-            $('#errorMessage').text('Invalid username or password!');
-        }
-    });
-    
+    event.preventDefault(); // Prevent the form from submitting
+
+    var username = $('#username').val();
+    var password = $('#password').val();
+
+    if (username === 'user1' && password === 'passAdmin01#')
+    {
+        window.location.href = 'file:///E:/DEV/FinalProjectWeb1/Content/questionnaire.html';
+    }
+    else
+    {
+        $('#errorMessage').text('Invalid Username or Password!');
+    }
+}
+
+//Logout function
+$(document).ready(function()
+{
     $('#logout').on('click', function()
     {
+        console.log('Logout link clicked');
         sessionStorage.removeItem('authenticated');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html'; 
     });
+});
 
-    var quizAnswers = {};
 
-function validateRadioSelection() {
-    document.querySelectorAll('input[type="radio"]').forEach(function(input) {
-        input.addEventListener('change', function() {
+
+
+
+/////////////////////////////////////////////// Questionnaire Script ///////////////////////////////////////////////
+
+// Validation for the radio buttons
+function validateRadioSelection()
+{
+    document.querySelectorAll('input[type="radio"]').forEach(function(input)
+    {
+        input.addEventListener('change', function()
+        {
             var currentValue = input.value;
             document.querySelectorAll('input[type="radio"]').forEach(function(otherInput)
             {
-                if (otherInput !== input && otherInput.value === currentValue) {
+                if (otherInput !== input && otherInput.value === currentValue)
+                {
                     otherInput.checked = false;
                 }
             });
@@ -66,13 +82,13 @@ function validateRadioSelection() {
     });
 }
 
-window.onload = function() {
+window.onload = function()
+{
     validateRadioSelection();
 };
 
-function user_input(pageNumber) {
-    
-
+function user_input(pageNumber)
+{
     //using JQuery instead of document.querySelector
     var selectedOptions = [];
     var opt_a = $('input[name="opt_a"]:checked').val();
@@ -80,7 +96,8 @@ function user_input(pageNumber) {
     var opt_c = $('input[name="opt_c"]:checked').val();
     var opt_d = $('input[name="opt_d"]:checked').val();
 
-    if (opt_a && opt_b && opt_c && opt_d) {
+    if (opt_a && opt_b && opt_c && opt_d)
+    {
         selectedOptions.push(opt_a);
         selectedOptions.push(opt_b);
         selectedOptions.push(opt_c);
@@ -93,29 +110,36 @@ function user_input(pageNumber) {
         var mergedAnswers = { ...existingAnswers, ...quizAnswers };
         cache.setItem("quizAnswers", JSON.stringify(mergedAnswers));
         return true;
-    } else {
+    }
+    else
+    {
         alert('Please select an option for all questions.');
         return false;
     }
 }
 
 // Function to advance to the next page.
-function goForward(pageNumber) {
-    if (user_input(pageNumber)) {
+function goForward(pageNumber)
+{
+    if (user_input(pageNumber))
+    {
         // Redirects to the next page.
         var nextPage = pageNumber + 1;
-        if(nextPage == 12){
+        if(nextPage == 12)
+        {
             window.location.href = 'results.html'
         }
-        else{
+        else
+        {
         window.location.href = 'q' + nextPage + '.html'; 
         }
     }
 }
 
 
-/*
 
+
+/////////////////////////////////////////////// Results Script ///////////////////////////////////////////////
 // Script for Result page by Diego
 
 var cache = window.sessionStorage;
@@ -160,12 +184,14 @@ var resultados = [
 resultados.sort(function(a, b) {return b.value - a.value;});
 
 // Destacar as duas colunas com os maiores resultados
-for (var i = 0; i < resultados.length; i++) {
+for (var i = 0; i < resultados.length; i++)
+{
     var label = resultados[i].label;
     var value = resultados[i].value;
 
     // Adicionar uma classe de destaque às duas colunas com os maiores resultados
-    if (i < 2) {
+    if (i < 2)
+    {
         document.getElementById('var' + label + '1').classList.add('destaque');
     }
 
@@ -211,4 +237,5 @@ totalDElement.classList.add('destaque');
 
 	}
 
-    */
+   
+   

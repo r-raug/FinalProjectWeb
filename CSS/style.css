@@ -19,6 +19,22 @@ header
     font-weight: bold;
     font-size: 20px;
     background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo
+{
+    width: 40px;
+    height: auto;
+    margin-right: 20px;    
 }
 
 h1
@@ -26,13 +42,13 @@ h1
     text-align: center;
     padding: 10px;
     color: black;
+    margin: 0;
 }
 
 .container
 {
     display: flex;
     justify-content: right;
-    min-height:30vh
 }
 #nav-bar
 {
@@ -116,7 +132,8 @@ nav li
 #aboutUsContent
 {
     background-color: beige;
-    margin: 10px auto; 
+    margin: 10px auto;
+    margin-bottom: 30px;
     padding: 10px;
     border: 1px solid black; 
     align-items: center;
@@ -136,11 +153,6 @@ nav li
     padding: 15px;
     color: #fff;
     background-color: #333;
-}
-
-footer
-{
-
 }
 
 label
@@ -220,7 +232,8 @@ input[type="radio"]
 .qpage
 {        
     background-color: beige;
-    margin: 20px auto; 
+    margin: 20px auto;
+    margin-bottom: 50px;
     padding: 10px;
     border: 1px solid black; 
     align-items: left;
@@ -292,5 +305,5 @@ section .Answers_Color_p {
     position: absolute; 
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
 }
