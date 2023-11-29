@@ -275,3 +275,36 @@ $(document).ready(function() {
         fillUpTable();
     }
 });
+
+
+// Assuming you have an array or object containing page names and their respective sum values
+document.addEventListener("DOMContentLoaded", function() {
+
+var pageSums = [
+    { page: 'A_blue.html', sum:totalC},
+    { page: 'A_gold.html', sum:totalD},
+    { page: 'A_green.html', sum:totalB},
+    { page: 'A_orange.html', sum:totalA}
+];
+
+// Sort the pageSums array in descending order based on sum values
+pageSums.sort(function(a, b) { return b.sum - a.sum; });
+
+// Display links to the two pages with the highest sum values
+for (var i = 0; i < 2; i++) {
+    var pageName = pageSums[i].page;
+    var color = pageName.split('_')[1].split('.')[0];
+    var linkText;
+    
+    if (i === 0) {
+        linkText = 'Your first color is ' + color.charAt(0).toUpperCase() + color.slice(1);
+    } else {
+        linkText = 'Your second color is ' + color.charAt(0).toUpperCase() + color.slice(1);
+    }
+
+    var link = '<a href="' + pageName + '">' + linkText + '</a><br><br>';
+    
+    // Append the link to the specified element in result.html
+    document.getElementById('topColors').innerHTML += link;
+}
+});
