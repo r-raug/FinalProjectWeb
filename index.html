@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./Javascript/main.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <img class="logo" src="./images/logo.svg">
+            <h1>True Colors Personality Test</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <ul id="nav-bar">
+                <li>
+                    <a class="box1" href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a class="box1" id="homePageLoginLink" href="#">Login</a>
+                </li>
+                    <a class="box1" href="./Content/about.html">About Us</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+    <!--hidden login form-->
+    <form id="loginForm" onsubmit="handleSubmit(event)" style="display: none;">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" autocomplete="username">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+        <button type="submit" id="loginbutton">Login</button>
+        <button type="button" id="cancelLoginHomePage">Cancel</button>
+        <div id="errorMessage"></div>
+    </form>
+    <footer  class="main-footer">
+        <p>Created by: Diego, Felipe, Jorge, and Rony.</p>
+        <p>Author: Team 3</p>
+        <p>&copy; 2023 True Colors Personality Test. All rights reserved.</p>
+    </footer>  
+</body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Javascript/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="logo" src="../images/logo.svg">
+            <h1>True Colors Personality Test</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <ul id="nav-bar">
+                <li>
+                    <a class="box1" href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a class="box1" id="aboutUsLoginLink" href="#">Login</a>
+                </li>
+                    <a class="box1" href="./about.html">About Us</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+    <!--hidden login form-->
+    <form id="aboutUsLoginForm" onsubmit="handleSubmit(event)" style="display: none;">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" autocomplete="username">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+        <button type="submit" id="loginbutton">Login</button>
+        <button type="button" id="cancelLogin">Cancel</button>
+        <div id="errorMessage"></div>
+    </form>
+    <div id="aboutUsContent">
+        <h1> True Colors Personality Test</h1>
+        <h2>Why Personality Test?</h2><br>
+        <p>
+            A personality test is completed to yield a description of an individual’s distinct
+            personality traits.<br><br> In most instances, your personality will influence
+            relationships with your family, friends, and classmates and contribute to your
+            health and well-being. Teachers can administer a personality test in class to
+            help your children discover their strengths and developmental needs. The
+            driving force behind administering a personality test is to open up lines of
+            communication and bring students together to have a higher appreciation for
+            one another. A personality test can provide guidance to teachers of what
+            teaching strategies will be the most effective for their students.<br><br>
+        </p>
+        <p>
+            One of the most popular personality tests is the True Colors Personality
+            Test. This personality test asks a serious of questions to rate your likes and
+            dislikes. The test will then rate your personality as either a blue, green, orange
+            or gold personality type. You may be a combination of two colors, but usually
+            a student will exhibit one primary color. A personality test is not a means to
+            type cast a student, but it allows teachers to understand the personality
+            attributes associated with various students. You will operate as one primary
+            color for the most part, but high levels of stress and other environmental
+            factors can shift your personality type for short intervals. As a rule of
+            thumb, you should recognize your strong attributes and keep in mind the
+            attributes that irritate people.
+            Teachers should disseminate a personality test to their children the first week
+            of school. A personality test is a fun exercise for the class and will enable
+            the teacher to more adequately plan lessons and activities for their students.
+        </p>
+    
+        <div id="sidebar">
+                <aside>
+                    <p>
+                        Personality test can benefit your students by:<br>
+                        • Increasing productivity<br>
+                        • Get along better with classmates<br>
+                        • Help students realize their full potential<br>
+                        • Identify teaching strategies for students<br>
+                        • Help students appreciate other personality types<br>
+                    </p>
+                </aside>    
+        </div>
+    </div>
+</body>
+<footer  class="main-footer">
+    <p>Created by: Team 3 Diego, Felipe, Jorge, and Rony.</p>
+    <p>Author: Team 3</p>
+    <p>&copy; 2023 True Colors Personality Test. All rights reserved.</p>
+</footer>   
+</html>

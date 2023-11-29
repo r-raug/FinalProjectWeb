@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Colors Personality Test</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Javascript/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img class="logo" src="../images/logo.svg">
+            <h1>True Colors Personality Test</h1>
+        </div>
+    </header>
+
+<div class="container">
+    <nav>
+        <ul id="nav-bar">
+            <li>
+                <a href="#" class="box1" id="logout">Logout</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="qpage">
+        <!--create a form -->
+        <form action="q10.html" method="get" autocomplete="on" id="quizForm" onsubmit="return user_input()">
+            <fieldset>
+                <!--Question number 9 -->
+                <div class="question">
+                    <label>9. I feel good about myself when:<br /></label>
+                    <p class="info">*Select from 1 to 4 in order of importance to you, where:</p>
+
+                    <!--Options for question number 9 -->
+                    <div class="options">
+                        <div class="question">
+                            <label for="opt_a">a. I can do things that are difficult.</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="opt_a" id="opt_a" value="1"><label>1</label>
+                            <input type="radio" name="opt_a" id="opt_a" value="2"><label>2</label>
+                            <input type="radio" name="opt_a" id="opt_a" value="3"><label>3</label>
+                            <input type="radio" name="opt_a" id="opt_a" value="4"><label>4</label><br />
+                        </div>
+                    </div>
+
+                    <div class="options">
+                        <div class="question">
+                            <label for="opt_b">b. I can solve problems or figure things out.</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="opt_b" id="opt_b" value="1"><label>1</label>
+                            <input type="radio" name="opt_b" id="opt_b" value="2"><label>2</label>
+                            <input type="radio" name="opt_b" id="opt_b" value="3"><label>3</label>
+                            <input type="radio" name="opt_b" id="opt_b" value="4"><label>4</label><br />
+                        </div>
+                    </div>
+
+                    <div class="options">
+                        <div class="question">
+                            <label for="opt_c">c. I can help other people.</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="opt_c" id="opt_c" value="1"><label>1</label>
+                            <input type="radio" name="opt_c" id="opt_c" value="2"><label>2</label>
+                            <input type="radio" name="opt_c" id="opt_c" value="3"><label>3</label>
+                            <input type="radio" name="opt_c" id="opt_c" value="4"><label>4</label><br />
+                        </div>
+                    </div>
+
+                    <div class="options">
+                        <div class="question">
+                            <label for="opt_d">d. I am appreciated or rewarded for things I do.</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="opt_d" id="opt_d" value="1"><label>1</label>
+                            <input type="radio" name="opt_d" id="opt_d" value="2"><label>2</label>
+                            <input type="radio" name="opt_d" id="opt_d" value="3"><label>3</label>
+                            <input type="radio" name="opt_d" id="opt_d" value="4"><label>4</label><br />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <!--button to move to next question -->
+            <button class="forward" type="button" onclick="goForward(9)">Forward</button>
+        </form>
+        <footer  class="main-footer">
+            <p>Created by: Diego, Felipe, Jorge, and Rony.</p>
+            <p>Author: Team 3</p>
+            <p>&copy; 2023 True Colors Personality Test. All rights reserved.</p>
+        </footer>
+        
+</body>
+</html>
