@@ -10,10 +10,12 @@
 </head>
 <body>
     <header>
-        <div class="font-style">
+        <div class="header-content">
+            <img class="logo" src="../images/logo.svg">
             <h1>True Colors Personality Test</h1>
         </div>
     </header>
+    
     <div class="container">
         <nav>
             <ul id="nav-bar">
@@ -23,19 +25,21 @@
                 <li>
                     <a class="box1" id="aboutUsLoginLink" href="#">Login</a>
                 </li>
-                <li>
                     <a class="box1" href="./about.html">About Us</a>
                 </li>
+                
             </ul>
         </nav>
     </div>
     <!--hidden login form-->
-    <div id="aboutUsLoginForm" style="display: none;">
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
+    <form id="aboutUsLoginForm" onsubmit="handleSubmit(event)" style="display: none;">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" autocomplete="username">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
         <button type="submit" id="loginbutton">Login</button>
         <button type="button" id="cancelLogin">Cancel</button>
-    </div>
+        <div id="errorMessage"></div>
+    </form>
     <div id="aboutUsContent">
         <h1> True Colors Personality Test</h1>
         <h2>Why Personality Test?</h2><br>

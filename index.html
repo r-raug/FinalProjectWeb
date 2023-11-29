@@ -11,10 +11,12 @@
 <body>
     
     <header>
-        <div class="font-style">
+        <div class="header-content">
+            <img class="logo" src="./images/logo.svg">
             <h1>True Colors Personality Test</h1>
         </div>
     </header>
+    
     <div class="container">
         <nav>
             <ul id="nav-bar">
@@ -24,22 +26,23 @@
                 <li>
                     <a class="box1" id="homePageLoginLink" href="#">Login</a>
                 </li>
-                    <a class="box1" href="./About Us/about.html">About Us</a>
+                    <a class="box1" href="./Content/about.html">About Us</a>
                 </li>
                 
             </ul>
         </nav>
     </div>
     <!--hidden login form-->
-    <div id="loginForm" style="display: none;">
+    <form id="loginForm" onsubmit="handleSubmit(event)" style="display: none;">
         <h1>Login</h1>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
+        <input type="text" id="username" placeholder="Username" autocomplete="username">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
         <button type="submit" id="loginbutton">Login</button>
         <button type="button" id="cancelLoginHomePage">Cancel</button>
-    </div>
+        <div id="errorMessage"></div>
+    </form>
     <footer  class="main-footer">
-        <p>Created by: Team 3 Diego, Felipe, Jorge, and Rony.</p>
+        <p>Created by: Diego, Felipe, Jorge, and Rony.</p>
         <p>Author: Team 3</p>
         <p>&copy; 2023 True Colors Personality Test. All rights reserved.</p>
     </footer>  

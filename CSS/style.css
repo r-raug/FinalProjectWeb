@@ -19,6 +19,22 @@ header
     font-weight: bold;
     font-size: 20px;
     background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content
+{
+    display: flex;
+    align-items: center;
+}
+
+.logo
+{
+    width: 40px;
+    height: auto;
+    margin-right: 20px;    
 }
 
 h1
@@ -26,13 +42,13 @@ h1
     text-align: center;
     padding: 10px;
     color: black;
+    margin: 0;
 }
 
 .container
 {
     display: flex;
     justify-content: right;
-    min-height:30vh
 }
 #nav-bar
 {
@@ -116,7 +132,8 @@ nav li
 #aboutUsContent
 {
     background-color: beige;
-    margin: 10px auto; 
+    margin: 10px auto;
+    margin-bottom: 30px;
     padding: 10px;
     border: 1px solid black; 
     align-items: center;
@@ -136,11 +153,6 @@ nav li
     padding: 15px;
     color: #fff;
     background-color: #333;
-}
-
-footer
-{
-
 }
 
 label
@@ -220,7 +232,8 @@ input[type="radio"]
 .qpage
 {        
     background-color: beige;
-    margin: 20px auto; 
+    margin: 20px auto;
+    margin-bottom: 50px;
     padding: 10px;
     border: 1px solid black; 
     align-items: left;
@@ -235,33 +248,30 @@ input[type="radio"]
     border-radius: 10px;
 }
 
-.Answers_Color_body {
-    background-image: url(../images/back3.jpg);
-    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
-.Answers_Color_header {
-    background-color: gray;
+.Answers_Color_header
+{
+    background-color: beige;
     text-align: center;
-    padding: 1em;
+    padding: 10px;
+    width: 700px;
+    position: flex;
+    margin: 10px auto;
 }
 
-.Answers_Color_section {
+.Answers_Color_section
+{
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif, sans-serif;
     max-width: 800px;
     margin: 20px auto;
+    margin-bottom: 50px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.Answers_Color_h2 {
+.Answers_Color_h2
+{
     text-align: center;
     font-style: normal;
     font-weight: normal;
@@ -270,21 +280,24 @@ input[type="radio"]
     margin-top: 0;
 }
 
-.Answers_Color_h3{
+.Answers_Color_h3
+{
     font-weight: normal;
     font-size: 20px;
     margin-bottom: 0;
     margin-top: 20;
 }
 
-section .Answers_Color_p {
+section .Answers_Color_p
+{
     text-align: left;
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 0;
     margin-top: 0;}
 
-.main-footer {
+.main-footer
+{
     background-color: #f2f2f2; 
     color: black;
     text-align: center;
@@ -292,5 +305,5 @@ section .Answers_Color_p {
     position: absolute; 
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
 }
