@@ -307,3 +307,47 @@ section .Answers_Color_p
     width: 100%;
     height: 80px;
 }
+
+.result
+{   
+    font-size: 20px;
+    background-color: beige;
+    min-width: 50%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: solid #FFFFFF 1px;
+    /* backdrop-filter: blur(20px); */
+    animation: bounce2 2s ease;
+    padding-bottom: 40pt;
+    
+/*
+    background-color: beige;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid black; 
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    text-align: justify;
+
+    */
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 40% ;
+    align-items: center;
+    padding-bottom:200pt;
+    tn:nth-child(2) 
+    {
+        width: 200%; /* Substitua pelo valor desejado */
+    }
+}
