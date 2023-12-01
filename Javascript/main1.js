@@ -43,7 +43,7 @@ function handleSubmit(event) {
     var password = $('#password').val();
 
     if (username === 'user1' && password === 'passAdmin01#') {
-        window.location.href = 'file:///E:/DEV/FinalProjectWeb1/Content/questionnaire.html';
+        window.location.href = 'Content/questionnaire.html';
     } else {
         $('#errorMessage').text('Invalid Username or Password!');
     }
