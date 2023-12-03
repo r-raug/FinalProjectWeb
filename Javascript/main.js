@@ -3,28 +3,30 @@
 var quizAnswers = JSON.parse(window.sessionStorage.getItem("quizAnswers")) || {};
 
 // Script for handling login
-$(document).ready(function() {
+$(document).ready(function()
+{
     // Event handler for login link on home page
-    $('#homePageLoginLink').on('click', function(event) {
+    $('#homePageLoginLink').on('click', function(event)
+    {
         event.preventDefault();
         $('#loginForm').show();
     });
 
     // Event handler for cancel login on home page
-    $('#cancelLoginHomePage').on('click', function() {
+    $('#cancelLoginHomePage').on('click', function()
+    {
         $('#loginForm').hide();
-        window.location.href = 'index.html';
     });
 
     // Event handler for login link on about us page
     $('#aboutUsLoginLink').on('click', function(event) {
         event.preventDefault();
-        $('#aboutUsContent').hide();
         $('#aboutUsLoginForm').show();
+        $('#aboutUsContent').hide();
     });
 
     // Event handler for cancel login on about us page
-    $('#cancelLogin').on('click', function() {
+    $('#cancelAboutUsLogin').on('click', function() {
         $('#aboutUsLoginForm').hide();
         $('#aboutUsContent').show();
     });
@@ -34,19 +36,67 @@ $(document).ready(function() {
         sessionStorage.removeItem('authenticated');
         window.location.href = '../index.html';
     });
+    // Event handler for login form submission ON HOME PAGE
+    $('#password').on('focus', function() {
+        var newPassword = generatePassword();
+        $('#password').val(newPassword); 
+    });
+    // Event handler for login form submission ON ABOUT US PAGE
+    $('#aboutUsPassword').on('focus', function() {
+        var newPassword = generatePassword();
+        $(this).val(newPassword); 
+    });
+
+    $('#aboutUsLoginButton').on('click', function() {
+        $('#aboutUsLoginForm').submit();
+    });
+
 });
+
+function redirectToQuestionnaire() {
+    // obtain the current path
+    var path = window.location.pathname;
+
+    // verify if the current page is the home page
+    if (path.endsWith('index.html') || path.endsWith('/'))
+    {
+        window.location.href = 'Content/questionnaire.html';
+    }
+    else if (path.endsWith('about.html'))
+    {
+        // if the current page is the about us page, redirect to the questionnaire page
+        window.location.href = 'questionnaire.html';
+    }
+    else
+    {
+        console.error('The current page is not recognized for redirection.');
+    }
+}
 
 // Function for handling login submission
 function handleSubmit(event) {
     event.preventDefault();
-    var username = $('#username').val();
-    var password = $('#password').val();
+    var username = $(event.currentTarget).find('input[type="text"]').val();
+    var password = $(event.currentTarget).find('input[type="password"]').val();
 
-    if (username === 'user1' && password === 'passAdmin01#') {
-        window.location.href = 'Content/questionnaire.html'; // Link alterado do 
+    if (username === 'user1' && password) {
+        redirectToQuestionnaire(); // Chama a função de redirecionamento
     } else {
-        $('#errorMessage').text('Invalid Username or Password!');
+        var errorMessageId = event.currentTarget.id === 'loginForm' ? '#errorMessage' : '#aboutUsErrorMessage';
+        $(errorMessageId).text('Invalid Username or Password!');
     }
+}
+
+function generatePassword()
+{
+    var length = 8;
+    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i)
+    {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
 }
 
 
