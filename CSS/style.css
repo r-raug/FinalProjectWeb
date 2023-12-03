@@ -215,18 +215,29 @@ fieldset
     width: 95vw;
 }
 
-    
+.options .question label
+{
+    display: block;
+    margin-bottom: 20px; 
+}
+
+.options .radio {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+
 .options > div.radio
 {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: row;
 }
     
 input[type="radio"]
 {
-    margin: 5px;
-    transform: scale(1.2);       
+    margin: 0 3px;
+    transform: scale(1.3);
 }
     
 .qpage
@@ -243,9 +254,17 @@ input[type="radio"]
     font-size: 16px;
     text-align: justify;
 }
+
 .forward
 {
+    margin-top: 20px;
     border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    width: auto;
+    margin: 20px auto;
 }
 
 
@@ -321,23 +340,8 @@ section .Answers_Color_p
     text-align: center;
     border: solid #FFFFFF 1px;
     /* backdrop-filter: blur(20px); */
-    animation: bounce2 2s ease;
+    animation: bounce 2s ease;
     padding-bottom: 40pt;
-    
-/*
-    background-color: beige;
-    margin: 20px auto;
-    margin-bottom: 50px;
-    padding: 10px;
-    border: 1px solid black; 
-    align-items: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    text-align: justify;
-
-    */
 }
 
 table
@@ -348,6 +352,26 @@ table
     padding-bottom:200pt;
     tn:nth-child(2) 
     {
-        width: 200%; /* Substitua pelo valor desejado */
+        width: 50%;
     }
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+
+#redoTest {
+    border-radius: 10px;
+    padding: 10px 20px; 
+    background-color: #f2f2f2; 
+    border: 1px solid black; 
+    cursor: pointer; 
+}
+
+.resultsTable {
+    margin-bottom: 20px;
 }

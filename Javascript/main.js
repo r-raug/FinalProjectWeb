@@ -111,6 +111,28 @@ function goForward(pageNumber) {
 
 /////////////////////////////////////////////// Result Script ///////////////////////////////////////////////
 
+// Function to apply color to links
+function applyColorToLinks() {
+    var links = document.querySelectorAll('#topColors a');
+    links.forEach(function(link) {
+        var colorWord = link.textContent.match(/is (\w+)/)[1];
+        switch (colorWord.toLowerCase()) {
+            case 'orange':
+                link.style.color = 'orange';
+                break;
+            case 'green':
+                link.style.color = 'green';
+                break;
+            case 'blue':
+                link.style.color = 'blue';
+                break;
+            case 'gold':
+                link.style.color = 'gold';
+                break;
+        }
+    });
+}
+
 // Function to fill up the results table
 function fillUpTable() {
     var somaA = 0;
@@ -176,6 +198,7 @@ function fillUpTable() {
         // Append the link to the specified element in result.html
         document.getElementById('topColors').innerHTML += link;
     }
+    applyColorToLinks();
 }
 
 // Call the fillUpTable function when the results page is loaded
@@ -183,4 +206,11 @@ $(document).ready(function() {
     if (window.location.pathname.includes('results.html')) {
         fillUpTable();
     }
+
+    $('#redoTest').click(function() {
+        // clean up the session storage
+        sessionStorage.removeItem('quizAnswers');
+        // redirect to the first question
+        window.location.href = 'q1.html';
+    });
 });
