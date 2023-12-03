@@ -83,7 +83,17 @@ nav li
     border-radius: 10px;
 }
 
-
+#loginForm
+{
+    background-color: #f2f2f2; 
+    margin: 10px auto; 
+    padding: 10px;
+    border: 1px solid black; 
+    align-items: center;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
 #aboutUsLoginForm
 {
     background-color: #f2f2f2; 
@@ -96,7 +106,7 @@ nav li
     flex-direction: column;
 }
 
-#loginbutton
+#loginbutton, #aboutUsLoginButton
 {
     border: 2px solid black;
     border-radius: 10px;
@@ -107,26 +117,9 @@ nav li
     cursor: pointer;
 }
 
-#cancelLoginHomePage
+#cancelLoginHomePage, #cancelAboutUsLogin
 {
     border-radius: 10px;
-}
-
-#cancelLogin
-{
-    border-radius: 10px;
-}
-
-#loginForm
-{
-    background-color: #f2f2f2; 
-    margin: 10px auto; 
-    padding: 10px;
-    border: 1px solid black; 
-    align-items: center;
-    width: 700px;
-    display: flex;
-    flex-direction: column;
 }
 
 #aboutUsContent
